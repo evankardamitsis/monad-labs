@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
@@ -80,7 +80,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} bg-[#0A0A0A] text-[#F5F5F5] antialiased`}>
+      <body className={`${dmSans.variable} bg-[#0A0A0A] text-[#F5F5F5] antialiased`}>
         <div className="flex min-h-screen flex-col">
           <Navbar />
           <main className="flex-1 px-6 md:px-12 lg:px-20 xl:px-28">{children}</main>
